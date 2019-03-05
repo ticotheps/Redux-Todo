@@ -8,8 +8,18 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
-    console.log(action);
+    // console.log(action);
     switch (action.type) {
+        case ADD_TODO:
+            const newItem = {
+                task: action.payload,
+                id: state.items.length +1,
+                completed: false
+            };
+            return {
+                ...state,
+                items: [...state.items, newItem]
+            };
         case TOGGLE_CHECKMARK:
             return {
                 ...state,

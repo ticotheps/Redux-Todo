@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleCheckmark } from '../actions';
+import { addTodo, toggleCheckmark } from '../actions';
 
 class TodosList extends React.Component {
     state = {
@@ -10,14 +10,17 @@ class TodosList extends React.Component {
     addTodo = e => {
         console.log("The addTodo() function was triggered!");
         e.preventDefault();
+        this.props.addTodo(this.state.newTodo);
+        this.setState({ newTodo: "" });
     }
 
     handleChanges = e => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         this.setState({ newTodo: e.target.value });
     }
 
     toggleCheckmark = id => {
+        console.log("The toggleCheckmark() function was triggered!");
         this.props.toggleCheckmark(id);
     };
 
@@ -57,5 +60,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps, 
-    { toggleCheckmark }
+    { addTodo, toggleCheckmark }
 )(TodosList);
