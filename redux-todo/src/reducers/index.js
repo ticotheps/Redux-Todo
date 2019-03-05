@@ -1,13 +1,15 @@
+import { ADD_TODO } from '../actions';
 
 const initialState = {
     items: [
-        { task: "Complete daily stand-up form", completed: false },
-        { task: "Watch Traversy Media Redux Tutorial", completed: false }
+        { id: 1, task: "Complete daily stand-up form", completed: false },
+        { id: 2, task: "Watch Traversy Media Redux Tutorial", completed: false }
     ]
 };
 
 function reducer(state = initialState, action) {
     console.log(action);
+    return state;
 }
 
 export default reducer;
