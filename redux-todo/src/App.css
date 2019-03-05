@@ -8,7 +8,19 @@
   border: 1px solid blue;
 }
 
+.todos-list-container {
+  border: 1px solid darkviolet;
+}
+
 .todos-list {
   font-size: 1.8rem;
   border: 1px solid red;
+}
+
+.todos-list-input {
+  border: 1px solid green;
+}
+
+.todos-list-button {
+  
 }

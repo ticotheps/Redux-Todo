@@ -7,8 +7,13 @@ class TodosList extends React.Component {
 
     render () {
         return (
-            <div className="todos-list">
-                The ACTUAL List of Todos
+            <div className="todos-list-container">
+                I am the CONTAINER for the LIST
+                <div className="todos-list">
+                    The ACTUAL List of Todos
+                </div>
+                <input className="todos-list-input" type="text"/>
+                <button className="todos-list-button">Add Todo</button>
             </div>
         );
     };
