@@ -35,7 +35,7 @@ class TodosList extends React.Component {
                     onChange={this.handleChanges}
                     placeholder="New Todo Item"
                 />
-                <button className="todos-list-button" onClick={this.addTodo}>Add Todo</button>
+                <button className="todos-list-button" onClick={this.addTodo}>Add Todo Item</button>
                 <div className="todos-list">
                     {this.props.todoList.map(todo => (
                         <h3 

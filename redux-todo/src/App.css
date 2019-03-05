@@ -14,13 +14,11 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 5px solid red;
 }
 
 .title {
   margin: 15px 0;
   font-size: 6.0rem;
-  border: 1px solid blue;
 }
 
 .todos-list-container {
@@ -30,7 +28,6 @@ html {
   align-items: center;
   width: 60%;
   height: 800px;
-  border: 1px solid darkviolet;
 }
 
 .todos-list {
@@ -41,7 +38,7 @@ html {
   width: 90%;
   height: 600px;
   font-size: 3.0rem;
-  border: 1px solid red;
+  margin-top: 30px;
 }
 
 .todo-item {
@@ -51,7 +48,6 @@ html {
   width: 95%;
   font-size: 2.4rem;
   margin: 10px 0;
-  border: 1px solid orange;
   border-bottom: 1px solid black;
 }
 
@@ -64,7 +60,7 @@ html {
   padding-left: 10px;
   width: 90%;
   height: 50px;
-  margin: 20px 0;
+  margin: 40px 0;
   border: 1px solid black;
   border-radius: 3px;
 }
@@ -83,5 +79,6 @@ html {
 .todos-list-button:hover {
   cursor: pointer;
   color: white;
-  background-color: black;
+  background-color: blue;
+  border: 5px solid yellow;
 }

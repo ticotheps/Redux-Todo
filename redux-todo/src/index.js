@@ -14,7 +14,7 @@ const store = createStore(rootReducer);
 function App() {
     return (
         <div className="App">
-          <h1 className="title">Today's Todo List</h1>
+          <h1 className="title">The Thepsourinthone Todo List</h1>
           <TodosList />
         </div>
     );
