@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { toggleCheckmark } from '../actions';
 
 class TodosList extends React.Component {
 
@@ -39,5 +40,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(
-    mapStateToProps, {}
+    mapStateToProps, 
+    { toggleCheckmark }
 )(TodosList);
