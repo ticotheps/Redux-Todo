@@ -3,10 +3,18 @@ import { connect } from 'react-redux';
 import { toggleCheckmark } from '../actions';
 
 class TodosList extends React.Component {
+    state = {
+        newTodo: ""
+    };
 
     addTodo = e => {
         console.log("The addTodo() function was triggered!");
         e.preventDefault();
+    }
+
+    handleChanges = e => {
+        console.log(e.target.value);
+        this.setState({ newTodo: e.target.value });
     }
 
     toggleCheckmark = completed => {
@@ -19,6 +27,9 @@ class TodosList extends React.Component {
                 <input 
                     className="todos-list-input" 
                     type="text"
+                    name="newTodo"
+                    value={this.state.newTodo}
+                    onChange={this.handleChanges}
                     placeholder="New Todo Item"
                 />
                 <button className="todos-list-button" onClick={this.addTodo}>Add Todo</button>
