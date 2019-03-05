@@ -1,4 +1,4 @@
-import { ADD_TODO } from '../actions';
+import { ADD_TODO, TOGGLE_CHECKMARK } from '../actions';
 
 const initialState = {
     items: [
