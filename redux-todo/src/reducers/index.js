@@ -3,7 +3,7 @@ import { ADD_TODO } from '../actions';
 const initialState = {
     items: [
         { id: 1, task: "Complete daily stand-up form", completed: false },
-        { id: 2, task: "Watch Traversy Media Redux Tutorial", completed: false }
+        { id: 2, task: "Watch Traversy Media Redux Tutorial", completed: true }
     ]
 };
 

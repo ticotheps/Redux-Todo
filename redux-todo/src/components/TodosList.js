@@ -15,6 +15,7 @@ class TodosList extends React.Component {
                     {this.props.todoList.map(todo => (
                         <h3 key={todo.id} className="todo-item">
                             {todo.task}
+                            {todo.completed && <i className="fas fa-check" />}
                         </h3>
                     ))}
                 </div>
