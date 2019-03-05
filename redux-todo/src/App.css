@@ -1,6 +1,11 @@
 .App {
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid red;
 }
 
 .title {
@@ -9,18 +14,36 @@
 }
 
 .todos-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 800px;
   border: 1px solid darkviolet;
 }
 
 .todos-list {
+  width: 90%;
+  height: 700px;
   font-size: 1.8rem;
   border: 1px solid red;
 }
 
 .todos-list-input {
-  border: 1px solid green;
+  font-size: 1.2rem;
+  padding-left: 10px;
+  width: 90%;
+  height: 30px;
+  margin: 20px 0;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
 .todos-list-button {
-  
+  width: 40%;
+  height: 30px;
+  font-size: 1.4rem;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
