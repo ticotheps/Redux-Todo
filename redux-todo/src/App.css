@@ -55,6 +55,10 @@ html {
   border-bottom: 1px solid black;
 }
 
+.todo-item:hover {
+  cursor: pointer;
+}
+
 .todos-list-input {
   font-size: 2.6rem;
   padding-left: 10px;

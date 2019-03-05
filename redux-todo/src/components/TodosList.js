@@ -2,6 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class TodosList extends React.Component {
+
+    toggleCheckmark = completed => {
+        this.props.toggleCheckmark(completed);
+    };
+
     render() {
         return (
             <div className="todos-list-container">
@@ -13,7 +18,11 @@ class TodosList extends React.Component {
                 <button className="todos-list-button">Add Todo</button>
                 <div className="todos-list">
                     {this.props.todoList.map(todo => (
-                        <h3 key={todo.id} className="todo-item">
+                        <h3 
+                            key={todo.id} 
+                            className="todo-item" 
+                            onClick={() => this.toggleCheckmark(todo.completed)}
+                        >
                             {todo.task}
                             {todo.completed && <i className="fas fa-check" />}
                         </h3>
