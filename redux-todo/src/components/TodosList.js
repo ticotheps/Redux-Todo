@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const TodosList = props => {
     return (
@@ -16,4 +17,4 @@ const TodosList = props => {
     );
 };
 
-export default TodosList;
+export default connect()(TodosList);

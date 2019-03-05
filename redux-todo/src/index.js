@@ -1,6 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import rootReducer from './reducers';
+import TodosList from './components/TodosList';
+
+import './index.css';
+import './App.css';
+
+const store = createStore(rootReducer);
+
+function App() {
+    return (
+        <div className="App">
+          <h1 className="title">Today's Todo List</h1>
+          <TodosList />
+        </div>
+    );
+}
+
+const rootElement = document.getElementById('root');
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    rootElement
+);
