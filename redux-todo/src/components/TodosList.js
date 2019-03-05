@@ -4,6 +4,11 @@ import { toggleCheckmark } from '../actions';
 
 class TodosList extends React.Component {
 
+    addTodo = e => {
+        console.log("The addTodo() function was triggered!");
+        e.preventDefault();
+    }
+
     toggleCheckmark = completed => {
         this.props.toggleCheckmark(completed);
     };
@@ -16,7 +21,7 @@ class TodosList extends React.Component {
                     type="text"
                     placeholder="New Todo Item"
                 />
-                <button className="todos-list-button">Add Todo</button>
+                <button className="todos-list-button" onClick={this.addTodo}>Add Todo</button>
                 <div className="todos-list">
                     {this.props.todoList.map(todo => (
                         <h3 
