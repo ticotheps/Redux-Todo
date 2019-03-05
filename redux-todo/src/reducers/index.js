@@ -9,7 +9,23 @@ const initialState = {
 
 function reducer(state = initialState, action) {
     console.log(action);
-    return state;
+    switch (action.type) {
+        case TOGGLE_CHECKMARK:
+            return {
+                ...state,
+                items: state.items.map(item => {
+                    if (item.id === action.payload) {
+                        return {
+                            ...item,
+                            completed: !item.completed
+                        };
+                    }
+                    return item;
+                })
+            }
+        default:
+            return state;
+    }
 }
 
 export default reducer;

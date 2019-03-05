@@ -17,8 +17,8 @@ class TodosList extends React.Component {
         this.setState({ newTodo: e.target.value });
     }
 
-    toggleCheckmark = completed => {
-        this.props.toggleCheckmark(completed);
+    toggleCheckmark = id => {
+        this.props.toggleCheckmark(id);
     };
 
     render() {
@@ -38,7 +38,7 @@ class TodosList extends React.Component {
                         <h3 
                             key={todo.id} 
                             className="todo-item" 
-                            onClick={() => this.toggleCheckmark(todo.completed)}
+                            onClick={() => this.toggleCheckmark(todo.id)}
                         >
                             {todo.task}
                             {todo.completed && <i className="fas fa-check" />}
